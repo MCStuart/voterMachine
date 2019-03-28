@@ -1,0 +1,17 @@
+#yes{
+  background-color: green;
+  color: white;
+}
+
+#no {
+  background-color: red;
+  color: white;
+}
+
+.noShow {
+  display: none;
+}
+
+.yesShow {
+  display: none;
+}
