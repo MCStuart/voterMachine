@@ -5,18 +5,22 @@ $(document).ready(function(){
     event.preventDefault();
     var age = $("input#votingAge").val();
     var ageInt = parseInt(age);
-    
+
     function voterAge(ageInt) {
       if (ageInt < 18) {
-        $(".noShow").toggle();
+        $(".noShow").show();
+        $(".yesShow").hide();
       }
       else if (ageInt >= 18) {
-        $(".yesShow").toggle();
+        $(".noShow").hide();
+        $(".yesShow").show();
       }
       else {
         alert("I'm sorry, I didn't catch that. You must not be old enough to be online without parental supervision. Go play Neopets, ya chump.")
       }
     };
+
+    voterAge(ageInt);
   });
 });
 // Determines if user is old enough to vote
